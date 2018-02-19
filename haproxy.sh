@@ -81,7 +81,7 @@ function pre_install(){
     do
     echo -e "Please input port for haproxy & shadowsocks [1-65535]"
     read -p "(Default port: 8989):" haproxyport
-    [ -z "${haproxyport}" ] && haproxyport="8989"
+    [ -z "${haproxyport}" ] && haproxyport="9091"
     expr ${haproxyport} + 0 &>/dev/null
     if [ $? -eq 0 ]; then
         if [ ${haproxyport} -ge 1 ] && [ ${haproxyport} -le 65535 ]; then
